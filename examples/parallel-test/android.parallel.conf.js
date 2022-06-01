@@ -27,7 +27,7 @@ exports.config = {
     exclude: [],
     maxInstances: 10,
     capabilities: [{
-        momentumGw: '4033', //MOMENTUMSUITE_DEVICE_ID
+        momentumGw: '<momentum-suite-device-id>', //MOMENTUMSUITE_DEVICE_ID
         ...commonCapabilities
     },
     {
