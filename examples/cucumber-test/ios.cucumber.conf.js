@@ -40,7 +40,7 @@ exports.config = {
         name: [],
         profile: [],
         require: [
-            './android-examples/cucumber-test/steps/**/*.js'
+            './examples/cucumber-test/steps/**/*.js'
         ],
         snippetSyntax: undefined,
         snippets: true,
