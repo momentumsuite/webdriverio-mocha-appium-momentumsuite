@@ -13,3 +13,9 @@ WebdriverIO Integration with local or MomentumSuite real mobile farm devices
   * Local testing or using Momentum Suite's 150+ Android or iOS devices
   * Auto generated HTML Allure test report after test
   * Take screenshot on test failure
+
+## Supports
+
+**Requirements**
+
+WebdriverIO v7 requires Node.js version 14 or higher. If you don't have Node installed, download it from [here](https://nodejs.org/en/).
