@@ -6,7 +6,7 @@ WebdriverIO Integration with local or Momentum Suite real mobile farm devices
   * Native or Hybrid Android and iOS apps (APK, AAB, IPA)
   * Chrome mobileweb testing on Android devices
   * Safari mobileweb testing on iOS devices
-  * Page Object Model (POM) usage with wdio
+  * Page Object Model (POM) usage with [wdio](https://webdriver.io/)
   * Example BDD scenarios with [cucumber.js](https://github.com/cucumber/cucumber-js) and wdio
   * Testing with multiple files
   * Parallel testing on multi mobile devices
