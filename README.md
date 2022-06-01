@@ -1,2 +1,2 @@
-# webdriverio-appium-momentumsuite
+# webdriverio-mocha-appium-momentumsuite
 WebdriverIO Integration with MomentumSuite
