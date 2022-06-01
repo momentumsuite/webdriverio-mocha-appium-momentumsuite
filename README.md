@@ -11,5 +11,5 @@ WebdriverIO Integration with local or MomentumSuite real mobile farm devices
   * Testing with multiple files
   * Parallel testing on multi mobile devices
   * Local testing or using Momentum Suite's 150+ Android or iOS devices
-  * Auto generated Allure test report after test
+  * Auto generated HTML Allure test report after test
   * Take screenshot on test failure
