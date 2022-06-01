@@ -1,0 +1,61 @@
+{
+    "name": "webdriverio-appium-app-momentumsuite",
+    "version": "0.1.0",
+    "readme": "WebdriverIO Integration with [MomentumSuite](https://www.momentumsuite.com)",
+    "description": "Selenium & Appium examples for WebdriverIO and MomentumSuite MLab",
+    "scripts": {
+        "test": "npm run android-first",
+        "android-first": "./node_modules/.bin/wdio examples/getting-started/android.first.conf.js",
+        "android-parallel": "./node_modules/.bin/wdio examples/parallel-test/android.parallel.conf.js",
+        "android-local": "./node_modules/.bin/wdio examples/local-test/android.local.conf.js",
+        "android-pom": "./node_modules/.bin/wdio examples/pom-test/android.pom.conf.js",
+        "android-cucumber": "./node_modules/.bin/wdio examples/cucumber-test/android.cucumber.conf.js",
+        "android-multiple": "./node_modules/.bin/wdio examples/multiple-test/android.multiple.conf.js",
+        "android-chrome": "./node_modules/.bin/wdio examples/chrome-test/android.chrome.conf.js",
+        "ios-first": "./node_modules/.bin/wdio examples/getting-started/ios.first.conf.js",
+        "ios-parallel": "./node_modules/.bin/wdio examples/parallel-test/ios.parallel.conf.js",
+        "ios-local": "./node_modules/.bin/wdio examples/local-test/ios.local.conf.js",
+        "ios-pom": "./node_modules/.bin/wdio examples/pom-test/ios.pom.conf.js",
+        "ios-cucumber": "./node_modules/.bin/wdio examples/cucumber-test/ios.cucumber.conf.js",
+        "ios-multiple": "./node_modules/.bin/wdio examples/multiple-test/ios.multiple.conf.js",
+        "ios-safari": "./node_modules/.bin/wdio examples/safari-test/ios.safari.conf.js"
+    },
+    "dependencies": {
+        "@badisi/wdio-harness": "^1.0.4",
+        "@wdio/allure-reporter": "^7.19.7",
+        "@wdio/appium-service": "^7.19.5",
+        "@wdio/cli": "^7.19.7",
+        "@wdio/cucumber-framework": "^7.19.7",
+        "@wdio/local-runner": "^7.19.7",
+        "@wdio/mocha-framework": "^7.19.7",
+        "@wdio/spec-reporter": "^7.19.7",
+        "allure-commandline": "^2.17.2",
+        "chai": "^4.3.6",
+        "chromedriver": "^101.0.0",
+        "mocha-allure-reporter": "^1.4.0",
+        "wdio-chromedriver-service": "^7.3.2",
+        "wdio-wait-for": "^2.2.6",
+        "webdriverio": "^7.19.7"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/momentumsuite/webdriverio-appium-app-momentumsuite.git"
+    },
+    "keywords": [
+        "webdriverio",
+        "wdio",
+        "momentumsuite",
+        "mobven",
+        "appium",
+        "selenium",
+        "tests",
+        "native app",
+        "hybrid",
+        "android",
+        "ios"
+    ],
+    "bugs": {
+        "url": "https://github.com/momentumsuite/webdriverio-appium-app-momentumsuite/issues"
+    },
+    "homepage": "https://github.com/momentumsuite/webdriverio-appium-app-momentumsuite#readme"
+}
