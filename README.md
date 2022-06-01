@@ -1,2 +1,2 @@
-# webdriverio-mocha-appium-momentumsuite
-WebdriverIO Integration with MomentumSuite
+# WebdriverIO Mocha Appium Momentumsuite
+WebdriverIO Integration with local or MomentumSuite real mobile farm devices
