@@ -1,8 +1,8 @@
 {
-    "name": "webdriverio-appium-app-momentumsuite",
+    "name": "webdriverio-mocha-appium-momentumsuite",
     "version": "0.1.0",
-    "readme": "WebdriverIO Integration with [MomentumSuite](https://www.momentumsuite.com)",
-    "description": "Selenium & Appium examples for WebdriverIO and MomentumSuite MLab",
+    "readme": "WebdriverIO Integration with local or [MomentumSuite](https://www.momentumsuite.com) real mobile farm devices",
+    "description": "Boilerplate project to run MOBILE Test Automation with WebdriverIO v7, Mocha, Appium, Allure reporting and Momentum Suite cloud device farm support",
     "scripts": {
         "test": "npm run android-first",
         "android-first": "./node_modules/.bin/wdio examples/getting-started/android.first.conf.js",
@@ -39,7 +39,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/momentumsuite/webdriverio-appium-app-momentumsuite.git"
+        "url": "git+https://github.com/momentumsuite/webdriverio-mocha-appium-momentumsuite.git"
     },
     "keywords": [
         "webdriverio",
@@ -55,7 +55,7 @@
         "ios"
     ],
     "bugs": {
-        "url": "https://github.com/momentumsuite/webdriverio-appium-app-momentumsuite/issues"
+        "url": "https://github.com/momentumsuite/webdriverio-mocha-appium-momentumsuite/issues"
     },
-    "homepage": "https://github.com/momentumsuite/webdriverio-appium-app-momentumsuite#readme"
+    "homepage": "https://github.com/momentumsuite/webdriverio-mocha-appium-momentumsuite#readme"
 }
