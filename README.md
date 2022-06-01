@@ -20,6 +20,8 @@ WebdriverIO Integration with local or Momentum Suite real mobile farm devices
 
 WebdriverIO v7 requires Node.js version 14 or higher. If you don't have Node installed, download it from [here](https://nodejs.org/en/).
 
+Install the [Allure command-line tool](https://www.npmjs.com/package/allure-commandline), and process the results directory after test run.
+
 **Install the dependencies:**
 
 Run the following command in project's base directory :
@@ -85,4 +87,12 @@ npm run android-local
  npm run ios-safari
 ```
  
+**Allure Reporting**
  
+ Run the following command in project's base directory after test run has been completed. This command will open a browser window with HTML test results.
+```
+allure open
+```
+
+## Getting Help
+If you are running into any issues or have any queries, please check [Momentum Suite Contact page](https://www.momentumsuite.com/contact/) or get in touch with us.
