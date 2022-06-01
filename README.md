@@ -1,8 +1,7 @@
 # WebdriverIO Mocha Appium Momentumsuite
 WebdriverIO Integration with local or MomentumSuite real mobile farm devices
 
-**Supports**
-
+## Supports
   * Native or Hybrid Android and iOS apps (APK, AAB, IPA)
   * Chrome mobileweb testing on Android devices
   * Safari mobileweb testing on iOS devices
