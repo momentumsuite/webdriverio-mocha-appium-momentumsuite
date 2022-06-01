@@ -39,7 +39,7 @@ With a Momentum Suite account, You need 4 things to start without any Appium or 
  Do not forget to check hostname, port, path and protocol values on your conf.js file.
 
 **Start with Android device:**
- Open for editing your android.first.conf.js file under /examples/getting-started directory.
+ Open for editing your android.first.conf.js file under [/examples/getting-started directory](https://github.com/momentumsuite/webdriverio-mocha-appium-momentumsuite/tree/main/examples/getting-started).
  
  Set momentumUser, momentumToken, momentumGw and app capabilities.
  
