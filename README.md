@@ -11,7 +11,7 @@
   * Testing with multiple files
   * Parallel testing on multi mobile devices
   * Local testing or using Momentum Suite's 150+ Android or iOS devices
-  * Auto generated HTML Allure test report after test
+  * Auto generated HTML [Allure](https://docs.qameta.io/allure/) test report after test
   * Take screenshot on test failure
 
 ## Setup
