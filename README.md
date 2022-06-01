@@ -32,7 +32,7 @@ npm i
 Getting Started with Appium tests using WebdriverIO on Momentum Suite couldn't be easier!
 With a Momentum Suite account, You need 4 things to start without any Appium or Android SDK dependencies.
   * Momentum Suite username: Usually it could be your email address
-  * Momentum Suite access key: Your unique access token learned from moemntumsuite.com
+  * Momentum Suite access key: Your unique access token learned from momentumsuite.com
   * Momentum Suite device id(s): Mobile device ID information to run the test. It's a 4 digit number.
   * Momentum Suite app id: Your uploaded IPA, APK or AAB app file from Momentum Suite Application Library. Example format is ms://<hashed-app-id>
  
