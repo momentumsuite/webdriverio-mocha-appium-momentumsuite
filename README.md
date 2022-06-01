@@ -68,7 +68,7 @@ Run the following command in project's base directory :
 npm run android-local
 ```
  
- **All commands to start mobile tests:**
+ **All available commands to start mobile testing:**
  ```
  npm run android-first
  npm run android-parallel
