@@ -21,6 +21,7 @@ exports.config = {
         browserName: 'Safari',
         language: 'en',
         locale: 'en',
+        deviceName: '',
         udid: ''
     }],
     logLevel: 'info',
