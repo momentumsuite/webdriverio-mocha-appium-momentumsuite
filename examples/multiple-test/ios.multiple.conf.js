@@ -27,6 +27,7 @@ exports.config = {
         locale: 'en',
         fullReset: true,
         noReset: false,
+        deviceName: '',
         udid: ''
     }],
     logLevel: 'info',
