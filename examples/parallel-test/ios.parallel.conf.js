@@ -12,6 +12,7 @@ var commonCapabilities = {
     locale: 'en',
     fullReset: true,
     noReset: false,
+    deviceName: '',
     udid: ''
 }
 
