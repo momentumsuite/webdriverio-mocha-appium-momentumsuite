@@ -34,14 +34,14 @@ With a Momentum Suite account, You need 4 things to start without any Appium or 
   * Momentum Suite username: Usually it could be your email address
   * Momentum Suite access key: Your unique access token learned from momentumsuite.com
   * Momentum Suite device id(s): Mobile device ID information to run the test. It's a 4 digit number.
-  * Momentum Suite app id: Your uploaded IPA, APK or AAB app file from Momentum Suite Application Library. Example format is ms://<hashed-app-id>
+  * Momentum Suite app path: Your uploaded IPA, APK or AAB app file from Momentum Suite Application Library. Example format is ms://<hashed-app-id>
  
- Do not forget to check hostname, port, path and protocol values on your conf.js file.
+ Do not forget to check hostname, port, path and protocol values on your test-settings.js file.
 
 **Start with Android device:**
- Open for editing your android.first.conf.js file under [/examples/getting-started directory](https://github.com/momentumsuite/webdriverio-mocha-appium-momentumsuite/tree/main/examples/getting-started).
+ Open for editing your test-settings.js file under [root directory](https://github.com/momentumsuite/webdriverio-mocha-appium-momentumsuite/tree/main/test-settings.js).
  
- Set momentumUser, momentumToken, momentumGw and app capabilities.
+ Set momentumsuite.user, momentumsuite.token, momentumsuite.deviceList, momentumsuite.appPath.
  
  Test script is available in getting-started directory
  
@@ -52,7 +52,7 @@ npm run android-first
 
 
 **Start with iOS device:**
-Same with Android, but need to change ios.first.conf.js file.
+Same with Android, but need to change test-settings.js file.
  
 Run the following command in project's base directory :
 ```
@@ -61,7 +61,7 @@ npm run ios-first
  
 
 **Start with local testing:**
-Use Local testing that access resources hosted in your development or testing environments. You need to install Appium and it's all dependencies like Android SDK, Xcode, Command Line tools. At the same sime you will need to run a real device or simulator/emulator.  Do not forget to check hostname, port, path and protocol values on your conf.js file with your own Appium server.
+Use Local testing that access resources hosted in your development or testing environments. You need to install Appium and it's all dependencies like Android SDK, Xcode, Command Line tools. At the same sime you will need to run a real device or simulator/emulator.  Do not forget to check hostname, port, path and protocol values on your test-settings.js file with your own Appium server.
  
 Run the following command in project's base directory :
 ```
