@@ -1,10 +1,11 @@
-const allure = require('allure-commandline')
+const allure = require('allure-commandline');
+const {DATA} = require('../../test-settings.js');
 
 exports.config = {
-    hostname: 'momentumv2.mobven.com',
-    port: 8088,
-    path: '/wd/hub/',
-    protocol: 'http',
+    hostname: DATA.CLOUD['momentumsuite.hostname'],
+    port: DATA.CLOUD['momentumsuite.port'],
+    path: DATA.CLOUD['momentumsuite.path'],
+    protocol: DATA.CLOUD['momentumsuite.protocol'],
     specs:
          [
             './examples/multiple-test/specs/multiple1.js',
@@ -15,10 +16,10 @@ exports.config = {
     exclude: [],
     maxInstances: 1,
     capabilities: [{
-        momentumUser: '<momentum-suite-username>', //MOMENTUMSUITE_USERNAME
-        momentumToken: '<momentum-suite-access-key>', //MOMENTUMSUITE_ACCESS_KEY
-        momentumGw: '<momentum-suite-device-id>', //MOMENTUMSUITE_DEVICE_ID
-        app: 'ms://<hashed-app-id>', //MOMENTUMSUITE_APP_ID
+        momentumUser: DATA.CLOUD['momentumsuite.user'],
+        momentumToken: DATA.CLOUD['momentumsuite.token'],
+        momentumGw: DATA.CLOUD['momentumsuite.deviceList'][0],
+        app: DATA.CLOUD['momentumsuite.appPath'],
         maxInstances: 1,
         platformName: 'iOS',
         automationName: 'XCUITest',

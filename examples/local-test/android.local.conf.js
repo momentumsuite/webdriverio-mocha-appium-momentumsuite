@@ -1,19 +1,19 @@
-const allure = require('allure-commandline')
+const allure = require('allure-commandline');
+const {DATA} = require('../../test-settings.js');
 
 exports.config = {
-    hostname: '127.0.0.1',
-    port: 4723,
-    path: '/wd/hub/',
-    protocol: 'http',
+    hostname: DATA.LOCAL.appiumHostname,
+    port: DATA.LOCAL.appiumPort,
+    path: DATA.LOCAL.appiumPath,
+    protocol:  DATA.LOCAL.appiumProtocol,
     specs: [
         './examples/local-test/specs/*.js'
     ],
     exclude: [],
     maxInstances: 10,
     capabilities: [{
-        deviceName: 'emulator-5554',
-        app: 'https://momentumsuite.com/downloads/My-Bank-Wallet-v1.apk',
-        //app: '<hashed-app-id>',
+        deviceName:  DATA.LOCAL.deviceName,
+        app:  DATA.LOCAL.appPath,
         maxInstances: 5,
         platformName: 'Android',
         automationName: 'UiAutomator2',
