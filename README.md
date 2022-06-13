@@ -86,6 +86,11 @@ npm run android-local
  npm run ios-safari
 ```
  
+**Appium Inspector usage with Momentum Suite devices:**
+ 
+ ![image](https://user-images.githubusercontent.com/105457661/173353247-06468793-f3b1-4eab-8b86-ec44f4646848.png)
+
+ 
 **Allure Reporting**
  
  Run the following command in project's base directory after test run has been completed. This command will open a browser window with HTML test results.
