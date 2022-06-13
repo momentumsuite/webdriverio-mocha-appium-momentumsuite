@@ -2,10 +2,10 @@ const allure = require('allure-commandline');
 const {DATA} = require('../../test-settings.js');
 
 exports.config = {
-    hostname: DATA.LOCAL.appiumHostname,
-    port: DATA.LOCAL.appiumPort,
-    path: DATA.LOCAL.appiumPath,
-    protocol:  DATA.LOCAL.appiumProtocol,
+    hostname: DATA.LOCAL.hostname,
+    port: DATA.LOCAL.port,
+    path: DATA.LOCAL.path,
+    protocol:  DATA.LOCAL.protocol,
     specs: [
         './examples/local-test/specs/*.js'
     ],
@@ -14,7 +14,7 @@ exports.config = {
     capabilities: [{
         platformName: "iOS",
         "appium:deviceName": DATA.LOCAL.deviceName,
-        "appium:app": DATA.LOCAL.appPath,
+        "appium:app": DATA.LOCAL.app,
         "appium:automationName": "XCUITest",
         "appium:autoAcceptAlerts": true,
         "appium:language": "en",

@@ -11,11 +11,11 @@ var DATA = {
        },
    
    LOCAL : {
-       "appPath": "https://momentumsuite.com/downloads/My-Bank-Wallet-v1.apk",
-       "appiumHostname": "127.0.0.1",
-       "appiumPort": 4723,
-       "appiumPath": "/wd/hub/",
-       "appiumProtocol": "http",
+       "app": "https://momentumsuite.com/downloads/My-Bank-Wallet-v1.apk",
+       "hostname": "127.0.0.1",
+       "port": 4723,
+       "path": "/wd/hub/",
+       "protocol": "http",
        "deviceName": "emulator-5554"
        }
    };
