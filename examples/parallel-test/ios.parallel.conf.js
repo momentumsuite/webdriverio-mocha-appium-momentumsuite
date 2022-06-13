@@ -2,19 +2,18 @@ const allure = require('allure-commandline');
 const {DATA} = require('../../test-settings.js');
 
 var commonCapabilities = {
-    momentumUser: DATA.CLOUD['momentumsuite.user'],
-    momentumToken: DATA.CLOUD['momentumsuite.token'],
-    app: DATA.CLOUD['momentumsuite.appPath'],
-    maxInstances: 10,
-    platformName: 'iOS',
-    automationName: 'XCUITest',
-    autoAcceptAlerts: true,
-    language: 'en',
-    locale: 'en',
-    fullReset: true,
-    noReset: false,
-    deviceName: '',
-    udid: ''
+    platformName: "iOS",
+    "momentum:user": DATA.CLOUD['momentumsuite.user'],
+    "momentum:token": DATA.CLOUD['momentumsuite.token'],
+    "appium:app": DATA.CLOUD['momentumsuite.appPath'],
+    "appium:automationName": "XCUITest",
+    "appium:autoAcceptAlerts": true,
+    "appium:language": "en",
+    "appium:locale": "en",
+    "appium:fullReset": true,
+    "appium:noReset": false,
+    "appium:deviceName": "",
+    "appium:udid": ""
 }
 
 exports.config = {
@@ -28,11 +27,11 @@ exports.config = {
     exclude: [],
     maxInstances: 10,
     capabilities: [{
-        momentumGw: DATA.CLOUD['momentumsuite.deviceList'][0],
+        "momentum:gw": DATA.CLOUD['momentumsuite.deviceList'][0],
         ...commonCapabilities
     },
     {
-        momentumGw: DATA.CLOUD['momentumsuite.deviceList'][1],
+        "momentum:gw": DATA.CLOUD['momentumsuite.deviceList'][1],
         ...commonCapabilities
     }],
     logLevel: 'info',
