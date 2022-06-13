@@ -1,20 +1,29 @@
 const allure = require('allure-commandline');
 const {DATA} = require('../../test-settings.js');
 
-var commonCapabilities = {
-    platformName: "Android",
-    "momentum:user": DATA.CLOUD['momentumsuite.user'],
-    "momentum:token": DATA.CLOUD['momentumsuite.token'],
-    "appium:app": DATA.CLOUD['momentumsuite.appPath'],
-    "appium:automationName": "UiAutomator2",
-    "appium:autoGrantPermissions": true,
-    "appium:language": "en",
-    "appium:locale": "en",
-    "appium:fullReset": true,
-    "appium:noReset": false,
-    "appium:deviceName": "",
-    "appium:udid": ""
-}
+var deviceCount = DATA.CLOUD['momentumsuite.deviceList'].length;
+var finalCapsText = "[";
+for (let i = 0; i < deviceCount; i++) {
+    finalCapsText += "{ \"momentum:gw\": " + DATA.CLOUD['momentumsuite.deviceList'][i] + "," +
+    "\"platformName\": \"Android\"," +
+    "\"momentum:user\": \"" + DATA.CLOUD['momentumsuite.user'] + "\"," +
+    "\"momentum:token\": \"" + DATA.CLOUD['momentumsuite.token'] + "\"," +
+    "\"appium:app\": \"" + DATA.CLOUD['momentumsuite.appPath'] + "\"," +
+    "\"appium:automationName\": \"UiAutomator2\"," +
+    "\"appium:autoGrantPermissions\": true," +
+    "\"appium:language\": \"en\"," +
+    "\"appium:locale\": \"en\"," +
+    "\"appium:fullReset\": true," +
+    "\"appium:noReset\": false," +
+    "\"appium:deviceName\": \"\"," +
+    "\"appium:udid\": \"\"" +
+    "}";
+    if (!((deviceCount-1)==i)) { finalCapsText +=","};
+  }
+finalCapsText +="]";
+
+console.log("Total device count: " + deviceCount);
+const finalCapsArrayList = JSON.parse(finalCapsText);
 
 exports.config = {
     hostname: DATA.CLOUD['momentumsuite.hostname'],
@@ -26,14 +35,7 @@ exports.config = {
     ],
     exclude: [],
     maxInstances: 10,
-    capabilities: [{
-        "momentum:gw": DATA.CLOUD['momentumsuite.deviceList'][0],
-        ...commonCapabilities
-    },
-    {
-        "momentum:gw": DATA.CLOUD['momentumsuite.deviceList'][1],
-        ...commonCapabilities
-    }],
+    capabilities: finalCapsArrayList,
     logLevel: 'info',
     bail: 0,
     waitforTimeout: 10000,
