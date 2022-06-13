@@ -88,7 +88,7 @@ npm run android-local
  
 **Appium Inspector usage with Momentum Suite devices:**
  
- ![image](https://user-images.githubusercontent.com/105457661/173353247-06468793-f3b1-4eab-8b86-ec44f4646848.png)
+![image](https://user-images.githubusercontent.com/105457661/173433950-a4b25919-8df6-4f48-be50-c5732eebe136.png)
 
  
 **Allure Reporting**
