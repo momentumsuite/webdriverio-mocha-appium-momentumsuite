@@ -1,14 +1,14 @@
 const allure = require('allure-commandline');
 const {DATA} = require('../../test-settings.js');
 
-var deviceCount = DATA.CLOUD['momentumsuite.deviceList'].length;
+var deviceCount = DATA.CLOUD['momentum.deviceList'].length;
 var finalCapsText = "[";
 for (let i = 0; i < deviceCount; i++) {
-    finalCapsText += "{ \"momentum:gw\": " + DATA.CLOUD['momentumsuite.deviceList'][i] + "," +
+    finalCapsText += "{ \"momentum:gw\": " + DATA.CLOUD['momentum.deviceList'][i] + "," +
     "\"platformName\": \"Android\"," +
-    "\"momentum:user\": \"" + DATA.CLOUD['momentumsuite.user'] + "\"," +
-    "\"momentum:token\": \"" + DATA.CLOUD['momentumsuite.token'] + "\"," +
-    "\"appium:app\": \"" + DATA.CLOUD['momentumsuite.appPath'] + "\"," +
+    "\"momentum:user\": \"" + DATA.CLOUD['momentum.user'] + "\"," +
+    "\"momentum:token\": \"" + DATA.CLOUD['momentum.token'] + "\"," +
+    "\"appium:app\": \"" + DATA.CLOUD['momentum.app'] + "\"," +
     "\"appium:automationName\": \"UiAutomator2\"," +
     "\"appium:autoGrantPermissions\": true," +
     "\"appium:language\": \"en\"," +
@@ -26,10 +26,10 @@ console.log("Total device count: " + deviceCount);
 const finalCapsArrayList = JSON.parse(finalCapsText);
 
 exports.config = {
-    hostname: DATA.CLOUD['momentumsuite.hostname'],
-    port: DATA.CLOUD['momentumsuite.port'],
-    path: DATA.CLOUD['momentumsuite.path'],
-    protocol: DATA.CLOUD['momentumsuite.protocol'],
+    hostname: DATA.CLOUD['momentum.hostname'],
+    port: DATA.CLOUD['momentum.port'],
+    path: DATA.CLOUD['momentum.path'],
+    protocol: DATA.CLOUD['momentum.protocol'],
     specs: [
         './examples/parallel-test/specs/*.js'
     ],

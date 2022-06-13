@@ -2,10 +2,10 @@ const allure = require('allure-commandline');
 const {DATA} = require('../../test-settings.js');
 
 exports.config = {
-    hostname: DATA.CLOUD['momentumsuite.hostname'],
-    port: DATA.CLOUD['momentumsuite.port'],
-    path: DATA.CLOUD['momentumsuite.path'],
-    protocol: DATA.CLOUD['momentumsuite.protocol'],
+    hostname: DATA.CLOUD['momentum.hostname'],
+    port: DATA.CLOUD['momentum.port'],
+    path: DATA.CLOUD['momentum.path'],
+    protocol: DATA.CLOUD['momentum.protocol'],
     specs:
          [
             './examples/multiple-test/specs/multiple1.js',
@@ -17,10 +17,10 @@ exports.config = {
     maxInstances: 1,
     capabilities: [{
         platformName: "iOS",
-        "momentum:user": DATA.CLOUD['momentumsuite.user'],
-        "momentum:token": DATA.CLOUD['momentumsuite.token'],
-        "momentum:gw": DATA.CLOUD['momentumsuite.deviceList'][0],
-        "appium:app": DATA.CLOUD['momentumsuite.appPath'],
+        "momentum:user": DATA.CLOUD['momentum.user'],
+        "momentum:token": DATA.CLOUD['momentum.token'],
+        "momentum:gw": DATA.CLOUD['momentum.deviceList'][0],
+        "appium:app": DATA.CLOUD['momentum.app'],
         "appium:automationName": "XCUITest",
         "appium:autoAcceptAlerts": true,
         "appium:language": "en",
