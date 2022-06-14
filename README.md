@@ -33,7 +33,7 @@ Getting Started with Appium tests using WebdriverIO on Momentum Suite couldn't b
 With a Momentum Suite account, You need 4 things to start without any Appium or Android SDK dependencies.
   * **momentum:user** Usually it could be your email address
   * **momentum:token** Your unique access token learned from momentumsuite.com
-  * **momentum:gw** Comma seperated mobile device ID list (4 digit number) to run the test. First number will be your default phone for all except parallel-testing.
+  * **momentum:gw** Comma seperated Momentum Suite mobile device ID list (4 digit number) to run the test. First number will be your default phone for all except parallel-testing.
   * **appium:app** Your uploaded IPA, APK or AAB app file from Momentum Suite Application Library. Example format is ms://<hashed-app-id> Optionally you can use a public accessible web URL.
  
  Do not forget to set these 4 Appium capability values and check hostname, port, path and protocol values on your **test-settings.js** file.
