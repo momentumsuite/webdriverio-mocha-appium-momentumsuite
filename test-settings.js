@@ -7,7 +7,7 @@ var DATA = {
        "momentum.port": 8088,
        "momentum.path": "/wd/hub/",
        "momentum.protocol": "http",
-       "momentum.deviceList": [4004] //Comma seperated device list for parallel-test run
+       "momentum.deviceList": [4069,4004] //Comma seperated device list for parallel-test run
        },
    
    LOCAL : {
