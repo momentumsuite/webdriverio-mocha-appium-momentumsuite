@@ -1,13 +1,13 @@
-var DATA = {
+var DATA = {   
     CLOUD : {
-       "momentum.user": "okan@asseco-see.com",
-       "momentum.token": "u6tYhEe4RAR37WM3pMKIMaDaCQkKlAjQ6pT0JYQCQIU=",
-       "momentum.app": "ms://9737f3df32bb49968b6e27ed7f3f0ac1", 
+       "momentum.user": "<momentum-suite-username>",
+       "momentum.token": "<momentum-suite-access-key>",
+       "momentum.app": "ms://<hashed-app-id>", 
        "momentum.hostname": "momentumv2.mobven.com",
        "momentum.port": 8088,
        "momentum.path": "/wd/hub/",
        "momentum.protocol": "http",
-       "momentum.deviceList": [4069,4004] //Comma seperated device list for parallel-test run
+       "momentum.deviceList": [momentum-suite-device-id] //Comma seperated device list for parallel-test run
        },
    
    LOCAL : {
