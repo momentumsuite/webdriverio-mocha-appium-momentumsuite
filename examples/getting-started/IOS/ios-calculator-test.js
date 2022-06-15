@@ -19,7 +19,7 @@ describe('Calculator', () => {
     await elTwo.click();
     await browser.pause(500);
     browser.saveScreenshot(PATH+randomInt(1,100000)+".png")
-
+ 
     var elThree = await $("//XCUIElementTypeButton[@name='5']");
     await elThree.click();
     await browser.pause(500);
