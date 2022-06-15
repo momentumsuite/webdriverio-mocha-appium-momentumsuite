@@ -7,7 +7,7 @@ exports.config = {
     path: DATA.CLOUD['momentum.path'],
     protocol: DATA.CLOUD['momentum.protocol'],
     specs: [
-        './examples/getting-started/specs/*.js'
+        './examples/getting-started/specs/Android/*.js'
     ],
     exclude: [],
     maxInstances: 1,

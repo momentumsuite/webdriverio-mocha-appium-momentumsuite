@@ -7,7 +7,7 @@ exports.config = {
     path: DATA.CLOUD['momentum.path'],
     protocol: DATA.CLOUD['momentum.protocol'],
     specs: [
-        './examples/getting-started/IOS/*.js'
+        './examples/getting-started/specs/IOS/*.js'
     ],
     exclude: [],
     maxInstances: 1,
@@ -48,9 +48,9 @@ exports.config = {
     },
     afterTest: async function(test, context, { error, result, duration, passed, retries }) {
         if (!passed) {
+            await browser.takeScreenshot();
             await browser.closeApp();
             driver.deleteSession();
-            await browser.takeScreenshot();
         }
     },
     onComplete: function() {
