@@ -47,6 +47,7 @@ exports.config = {
     afterTest: async function(test, context, { error, result, duration, passed, retries }) {
         if (!passed) {
             await browser.takeScreenshot();
+            driver.deleteSession();
         }
     },
     onComplete: function() {

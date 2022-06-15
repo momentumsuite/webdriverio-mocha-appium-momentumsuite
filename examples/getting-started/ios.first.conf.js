@@ -50,7 +50,7 @@ exports.config = {
         if (!passed) {
             await browser.takeScreenshot();
             await browser.closeApp();
-            driver.deleteSession();
+            driver.deleteSession();    
         }
     },
     onComplete: function() {
