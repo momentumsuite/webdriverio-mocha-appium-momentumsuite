@@ -41,7 +41,7 @@ With a Momentum Suite account, You need 4 things to start without any Appium or 
 **Start with Android device:**
  Open for editing your test-settings.js file under [root directory](https://github.com/momentumsuite/webdriverio-mocha-appium-momentumsuite/tree/main/test-settings.js).
  
- Set momentumsuite.user, momentumsuite.token, momentumsuite.deviceList, momentumsuite.appPath.
+ Set momentum.user, momentum.token, momentum.deviceList, momentum.app on test-settings.js file.
  
  Test script is available in getting-started directory
  
