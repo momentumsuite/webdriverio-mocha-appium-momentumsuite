@@ -106,3 +106,5 @@ dist
 # Allure directories
 allure-report/
 allure-results/
+package-lock.json
+test-settings.js
