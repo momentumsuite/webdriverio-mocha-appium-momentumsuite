@@ -4,10 +4,8 @@ const {DATA} = require('../../test-settings.js');
 var deviceCount = DATA.CLOUD['momentum.deviceList'].length;
 var finalCapsText = "[";
 for (let i = 0; i < deviceCount; i++) {
-    finalCapsText += "{ \"momentum:gw\": " + DATA.CLOUD['momentum.deviceList'][i] + "," +
+    finalCapsText += "{" +
     "\"platformName\": \"iOS\"," +
-    "\"momentum:user\": \"" + DATA.CLOUD['momentum.user'] + "\"," +
-    "\"momentum:token\": \"" + DATA.CLOUD['momentum.token'] + "\"," +
     "\"appium:app\": \"" + DATA.CLOUD['momentum.app'] + "\"," +
     "\"appium:automationName\": \"XCUITest\"," +
     "\"appium:autoAcceptAlerts\": true," +
@@ -16,7 +14,12 @@ for (let i = 0; i < deviceCount; i++) {
     "\"appium:fullReset\": true," +
     "\"appium:noReset\": false," +
     "\"appium:deviceName\": \"\"," +
-    "\"appium:udid\": \"\"" +
+    "\"appium:udid\": \"\"," +
+    "\"momentum:options\": {" +
+        "\"user\": \"" + DATA.CLOUD['momentum.user'] + "\"," +
+        "\"token\": \"" + DATA.CLOUD['momentum.token'] + "\"," +
+        "\"gw\": " + DATA.CLOUD['momentum.deviceList'][i] +
+    "}" +
     "}";
     if (!((deviceCount-1)==i)) { finalCapsText +=","};
   }

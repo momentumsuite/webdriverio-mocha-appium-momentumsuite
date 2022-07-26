@@ -13,16 +13,18 @@ exports.config = {
     maxInstances: 1,
     capabilities: [{
         platformName: "iOS",
-        "momentum:user": DATA.CLOUD['momentum.user'],
-        "momentum:token": DATA.CLOUD['momentum.token'],
-        "momentum:gw": DATA.CLOUD['momentum.deviceList'][0],
         "appium:automationName": "XCUITest",
         "appium:autoAcceptAlerts": true,
         "appium:browserName": "Safari",
         "appium:language": "en",
         "appium:locale": "en",
         "appium:deviceName": "",
-        "appium:udid": ""
+        "appium:udid": "",
+        "momentum:options": {
+            "user": DATA.CLOUD['momentum.user'],
+            "token": DATA.CLOUD['momentum.token'],
+            "gw": DATA.CLOUD['momentum.deviceList'][0]
+        }
     }],
     logLevel: 'info',
     bail: 0,
