@@ -85,10 +85,6 @@ npm run android-local
  npm run ios-multiple
  npm run ios-safari
 ```
- 
-**Appium Inspector usage with Momentum Suite devices:**
- 
-![image](https://user-images.githubusercontent.com/105457661/173579734-ae2ceae2-70c1-4c00-b58d-cdf81c0b29ef.png)
 
  
 **Allure Reporting**
