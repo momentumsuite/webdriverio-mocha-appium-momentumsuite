@@ -3,7 +3,7 @@ const {DATA} = require('../../test-settings.js');
 
 exports.config = {
     hostname: DATA.CLOUD['momentum.hostname'],
-    port: DATA.CLOUD['momentum.port'],
+    port: DATA.CLOUD['momentum.gw'],
     path: DATA.CLOUD['momentum.path'],
     protocol: DATA.CLOUD['momentum.protocol'],
     specs:
