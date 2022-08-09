@@ -4,7 +4,7 @@ var DATA = {
        "momentum.token": "<momentum-suite-access-key>",
        "momentum.app": "ms://<hashed-app-id>", 
        "momentum.hostname": "console.momentumsuite.com/gateway",
-       "momentum.port": 8088,
+       "momentum.gw": 8088,
        "momentum.path": "/wd/hub/",
        "momentum.protocol": "https",
        "momentum.deviceList": [4033] //Comma seperated device list for parallel-test run
