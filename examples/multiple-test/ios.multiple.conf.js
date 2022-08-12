@@ -6,6 +6,7 @@ exports.config = {
     port: DATA.CLOUD['momentum.gw'],
     path: DATA.CLOUD['momentum.path'],
     protocol: DATA.CLOUD['momentum.protocol'],
+    remoteDebugProxy : String.valueOf(momentumIOSDeviceId + 2000),
     specs:
          [
             './examples/multiple-test/specs/multiple1.js',
@@ -22,6 +23,7 @@ exports.config = {
         "appium:autoAcceptAlerts": true,
         "appium:language": "en",
         "appium:locale": "en",
+        "appium:remoteDebugProxy" : remoteDebugProxy,
         "appium:fullReset": true,
         "appium:noReset": false,
         "appium:deviceName": "",

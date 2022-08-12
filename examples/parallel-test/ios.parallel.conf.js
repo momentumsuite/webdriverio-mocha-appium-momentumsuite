@@ -11,6 +11,7 @@ for (let i = 0; i < deviceCount; i++) {
     "\"appium:autoAcceptAlerts\": true," +
     "\"appium:language\": \"en\"," +
     "\"appium:locale\": \"en\"," +
+    "\"appium:remoteDebugProxy\" : \"remoteDebugProxy\"," +
     "\"appium:fullReset\": true," +
     "\"appium:noReset\": false," +
     "\"appium:deviceName\": \"\"," +
@@ -33,6 +34,7 @@ exports.config = {
     port: DATA.CLOUD['momentum.gw'],
     path: DATA.CLOUD['momentum.path'],
     protocol: DATA.CLOUD['momentum.protocol'],
+    remoteDebugProxy : String.valueOf(momentumIOSDeviceId + 2000),
     specs: [
         './examples/parallel-test/specs/IOS/*.js'
     ],
