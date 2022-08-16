@@ -1,6 +1,7 @@
 const allure = require('allure-commandline');
 const {DATA} = require('../../test-settings.js');
 
+
 var deviceCount = DATA.CLOUD['momentum.deviceList'].length;
 var finalCapsText = "[";
 for (let i = 0; i < deviceCount; i++) {
@@ -11,7 +12,7 @@ for (let i = 0; i < deviceCount; i++) {
     "\"appium:autoAcceptAlerts\": true," +
     "\"appium:language\": \"en\"," +
     "\"appium:locale\": \"en\"," +
-    "\"appium:remoteDebugProxy\" : \"remoteDebugProxy\"," +
+    "\"appium:remoteDebugProxy\" : \"" + DATA.CLOUD['momentum.deviceList'][0] + 2000 + "\"," +
     "\"appium:fullReset\": true," +
     "\"appium:noReset\": false," +
     "\"appium:deviceName\": \"\"," +
@@ -34,7 +35,7 @@ exports.config = {
     port: DATA.CLOUD['momentum.gw'],
     path: DATA.CLOUD['momentum.path'],
     protocol: DATA.CLOUD['momentum.protocol'],
-    remoteDebugProxy : String.valueOf(momentumIOSDeviceId + 2000),
+    
     specs: [
         './examples/parallel-test/specs/IOS/*.js'
     ],

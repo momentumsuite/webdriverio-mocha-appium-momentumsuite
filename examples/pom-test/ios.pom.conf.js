@@ -1,12 +1,14 @@
 const allure = require('allure-commandline');
 const {DATA} = require('../../test-settings.js');
 
+var remoteDebugProxy = DATA.CLOUD['momentum.deviceList'][0] + 2000;
+
 exports.config = {
     hostname: DATA.CLOUD['momentum.hostname'],
     port: DATA.CLOUD['momentum.gw'],
     path: DATA.CLOUD['momentum.path'],
     protocol: DATA.CLOUD['momentum.protocol'],
-    remoteDebugProxy : String.valueOf(momentumIOSDeviceId + 2000),
+    
     specs: [
         './examples/pom-test/specs/*.js'
     ],
