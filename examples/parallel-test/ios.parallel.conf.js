@@ -1,13 +1,15 @@
 const allure = require('allure-commandline');
 const {DATA} = require('../../test-settings.js');
 
+
+
 var deviceCount = DATA.CLOUD['momentum.deviceList'].length;
 var finalCapsText = "[";
 for (let i = 0; i < deviceCount; i++) {
-    finalCapsText += "{ \"momentum:gw\": " + DATA.CLOUD['momentum.deviceList'][i] + "," +
+var remoteDebugProxy = DATA.CLOUD['momentum.deviceList'][i] + 2000;
+var remoteDebugProxys  = remoteDebugProxy.toString();
+    finalCapsText += "{" +
     "\"platformName\": \"iOS\"," +
-    "\"momentum:user\": \"" + DATA.CLOUD['momentum.user'] + "\"," +
-    "\"momentum:token\": \"" + DATA.CLOUD['momentum.token'] + "\"," +
     "\"appium:app\": \"" + DATA.CLOUD['momentum.app'] + "\"," +
     "\"appium:automationName\": \"XCUITest\"," +
     "\"appium:autoAcceptAlerts\": true," +
@@ -16,7 +18,13 @@ for (let i = 0; i < deviceCount; i++) {
     "\"appium:fullReset\": true," +
     "\"appium:noReset\": false," +
     "\"appium:deviceName\": \"\"," +
-    "\"appium:udid\": \"\"" +
+    "\"appium:udid\": \"\"," +
+    "\"appium:remoteDebugProxy\": \""+ remoteDebugProxys + "\","+
+    "\"momentum:options\": {" +
+        "\"user\": \"" + DATA.CLOUD['momentum.user'] + "\"," +
+        "\"token\": \"" + DATA.CLOUD['momentum.token'] + "\"," +
+        "\"gw\": " + DATA.CLOUD['momentum.deviceList'][i] +
+    "}" +
     "}";
     if (!((deviceCount-1)==i)) { finalCapsText +=","};
   }
@@ -27,11 +35,11 @@ const finalCapsArrayList = JSON.parse(finalCapsText);
 
 exports.config = {
     hostname: DATA.CLOUD['momentum.hostname'],
-    port: DATA.CLOUD['momentum.port'],
+    port: DATA.CLOUD['momentum.gw'],
     path: DATA.CLOUD['momentum.path'],
     protocol: DATA.CLOUD['momentum.protocol'],
     specs: [
-        './examples/parallel-test/specs/*.js'
+        './examples/parallel-test/specs/IOS/*.js'
     ],
     exclude: [],
     maxInstances: 10,
@@ -59,6 +67,8 @@ exports.config = {
     afterTest: async function(test, context, { error, result, duration, passed, retries }) {
         if (!passed) {
             await browser.takeScreenshot();
+            await browser.closeApp();
+            driver.deleteSession();
         }
     },
     onComplete: function() {

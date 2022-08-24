@@ -7,7 +7,7 @@ exports.config = {
     path: DATA.LOCAL.path,
     protocol:  DATA.LOCAL.protocol,
     specs: [
-        './examples/local-test/specs/*.js'
+        './examples/local-test/specs/Android/*.js'
     ],
     exclude: [],
     maxInstances: 10,

@@ -41,7 +41,7 @@ With a Momentum Suite account, You need 4 things to start without any Appium or 
 **Start with Android device:**
  Open for editing your test-settings.js file under [root directory](https://github.com/momentumsuite/webdriverio-mocha-appium-momentumsuite/tree/main/test-settings.js).
  
- Set momentumsuite.user, momentumsuite.token, momentumsuite.deviceList, momentumsuite.appPath.
+ Set momentum.user, momentum.token, momentum.deviceList, momentum.app on test-settings.js file.
  
  Test script is available in getting-started directory
  
@@ -85,10 +85,6 @@ npm run android-local
  npm run ios-multiple
  npm run ios-safari
 ```
- 
-**Appium Inspector usage with Momentum Suite devices:**
- 
-![image](https://user-images.githubusercontent.com/105457661/173579734-ae2ceae2-70c1-4c00-b58d-cdf81c0b29ef.png)
 
  
 **Allure Reporting**
@@ -100,3 +96,5 @@ allure open
 
 ## Getting Help
 If you are running into any issues or have any queries, please check [Momentum Suite Contact page](https://www.momentumsuite.com/contact/) or get in touch with us.
+ 
+Our Technical Documentation space is [here](https://www.momentumsuite.com/docs/).
