@@ -1,6 +1,9 @@
 const allure = require('allure-commandline');
 const {DATA} = require('../../test-settings.js');
 
+var remoteDebugProxy =  DATA.CLOUD['momentum.deviceList'][0] + 2000;
+var remoteDebugProxys = remoteDebugProxy.toString();
+
 exports.config = {
     hostname: DATA.CLOUD['momentum.hostname'],
     port: DATA.CLOUD['momentum.gw'],
@@ -20,6 +23,7 @@ exports.config = {
         "appium:locale": "en",
         "appium:deviceName": "",
         "appium:udid": "",
+        "appium:remoteDebugProxy": remoteDebugProxys,
         "momentum:options": {
             "user": DATA.CLOUD['momentum.user'],
             "token": DATA.CLOUD['momentum.token'],

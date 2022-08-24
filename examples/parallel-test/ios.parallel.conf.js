@@ -1,9 +1,13 @@
 const allure = require('allure-commandline');
 const {DATA} = require('../../test-settings.js');
 
+
+
 var deviceCount = DATA.CLOUD['momentum.deviceList'].length;
 var finalCapsText = "[";
 for (let i = 0; i < deviceCount; i++) {
+var remoteDebugProxy = DATA.CLOUD['momentum.deviceList'][i] + 2000;
+var remoteDebugProxys  = remoteDebugProxy.toString();
     finalCapsText += "{" +
     "\"platformName\": \"iOS\"," +
     "\"appium:app\": \"" + DATA.CLOUD['momentum.app'] + "\"," +
@@ -15,6 +19,7 @@ for (let i = 0; i < deviceCount; i++) {
     "\"appium:noReset\": false," +
     "\"appium:deviceName\": \"\"," +
     "\"appium:udid\": \"\"," +
+    "\"appium:remoteDebugProxy\": \""+ remoteDebugProxys + "\","+
     "\"momentum:options\": {" +
         "\"user\": \"" + DATA.CLOUD['momentum.user'] + "\"," +
         "\"token\": \"" + DATA.CLOUD['momentum.token'] + "\"," +
