@@ -1,9 +1,12 @@
 const allure = require('allure-commandline');
 const {DATA} = require('../../test-settings.js');
 
+var remoteDebugProxy =  DATA.CLOUD['momentum.deviceList'][0] + 2000;
+var remoteDebugProxys = remoteDebugProxy.toString();
+
 exports.config = {
     hostname: DATA.CLOUD['momentum.hostname'],
-    port: DATA.CLOUD['momentum.port'],
+    port: DATA.CLOUD['momentum.gw'],
     path: DATA.CLOUD['momentum.path'],
     protocol: DATA.CLOUD['momentum.protocol'],
     specs:
@@ -17,9 +20,6 @@ exports.config = {
     maxInstances: 1,
     capabilities: [{
         platformName: "iOS",
-        "momentum:user": DATA.CLOUD['momentum.user'],
-        "momentum:token": DATA.CLOUD['momentum.token'],
-        "momentum:gw": DATA.CLOUD['momentum.deviceList'][0],
         "appium:app": DATA.CLOUD['momentum.app'],
         "appium:automationName": "XCUITest",
         "appium:autoAcceptAlerts": true,
@@ -28,7 +28,13 @@ exports.config = {
         "appium:fullReset": true,
         "appium:noReset": false,
         "appium:deviceName": "",
-        "appium:udid": ""
+        "appium:udid": "",
+        "appium:remoteDebugProxy": remoteDebugProxys,
+        "momentum:options": {
+            "user": DATA.CLOUD['momentum.user'],
+            "token": DATA.CLOUD['momentum.token'],
+            "gw": DATA.CLOUD['momentum.deviceList'][0]
+        }
     }],
     logLevel: 'info',
     bail: 0,

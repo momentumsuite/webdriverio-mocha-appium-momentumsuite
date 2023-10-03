@@ -3,7 +3,7 @@ const {DATA} = require('../../test-settings.js');
 
 exports.config = {
     hostname: DATA.CLOUD['momentum.hostname'],
-    port: DATA.CLOUD['momentum.port'],
+    port: DATA.CLOUD['momentum.gw'],
     path: DATA.CLOUD['momentum.path'],
     protocol: DATA.CLOUD['momentum.protocol'],
     specs: [
@@ -13,16 +13,18 @@ exports.config = {
     maxInstances: 1,
     capabilities: [{
         platformName: "Android",
-        "momentum:user": DATA.CLOUD['momentum.user'],
-        "momentum:token": DATA.CLOUD['momentum.token'],
-        "momentum:gw": DATA.CLOUD['momentum.deviceList'][0],
         "appium:automationName": "UiAutomator2",
         "appium:browserName": "Chrome",
         "appium:autoGrantPermissions": true,
         "appium:language": "en",
         "appium:locale": "en",
         "appium:deviceName": "",
-        "appium:udid": ""
+        "appium:udid": "",
+        "momentum:options": {
+            "user": DATA.CLOUD['momentum.user'],
+            "token": DATA.CLOUD['momentum.token'],
+            "gw": DATA.CLOUD['momentum.deviceList'][0]
+        }
     }],
     logLevel: 'info',
     bail: 0,
